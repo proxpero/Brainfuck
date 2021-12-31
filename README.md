@@ -1,3 +1,5 @@
 # Brainfuck
 
-A description of this package.
+A brainfuck interpreter in idiomatic Swift, bundled in a Swift package.
+
+
