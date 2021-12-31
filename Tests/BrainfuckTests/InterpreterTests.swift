@@ -60,4 +60,12 @@ final class InterpreterTests: XCTestCase {
         try interpreter.run()
         XCTAssertEqual(interpreter.output, "Hello World!\n")
     }
+
+    func testEcho() throws {
+        let source = ",[.,]"
+        let input = "Hello, World!"
+        var interpreter = try Interpreter<UInt8>.init(source, input: input, memorySize: 1)
+        try interpreter.run()
+        XCTAssertEqual(interpreter.output, input)
+    }
 }

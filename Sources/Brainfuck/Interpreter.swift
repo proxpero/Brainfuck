@@ -118,6 +118,7 @@ private extension Interpreter {
         var value: Byte = 0
         if input.indices.contains(inputIndex), let code = input[inputIndex].asciiValue {
             value = Byte(code)
+            inputIndex = input.index(after: inputIndex)
         }
         data[dataIndex] = value
     }
